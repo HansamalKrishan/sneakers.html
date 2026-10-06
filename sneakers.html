@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Sneaker Store</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f7;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image-wrapper {
+            background-color: #f0f0f0;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px; 
+            transition: background-color 0.4s ease;
+        }
+
+        .card-image-wrapper:hover {
+            background-color: #d4edda; 
+        }
+
+        .card-image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            mix-blend-mode: darken;
+            transition: transform 0.4s ease;
+        }
+
+        .card-image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-grow: 1; 
+        }
+
+        .brand-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category {
+            font-size: 11px;
+            font-weight: 700;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .brand {
+            font-size: 12px;
+            font-weight: 700;
+            color: #000000;
+            background-color: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #171717;
+            line-height: 1.2;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.4;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+            padding-top: 16px;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: 800;
+            color: #000000;
+        }
+
+        .btn-product {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-product:hover {
+            background-color: #333333;
+        }
+
+        @media screen and (max-width: 900px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="Nike Air Max">
+            </div>
+            <div class="card-content">
+                <div class="brand-row">
+                    <span class="category">Lifestyle Running</span>
+                    <span class="brand">NIKE</span>
+                </div>
+                <h3 class="title">Air Max 270 React</h3>
+                <p class="description">Woven fabric provides a lightweight fit and feel, paired with a massive Max Air unit.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$150</span>
+                <button class="btn-product">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=500&q=80" alt="Under Armour HOVR">
+            </div>
+            <div class="card-content">
+                <div class="brand-row">
+                    <span class="category">Road Running</span>
+                    <span class="brand">UNDER ARMOUR</span>
+                </div>
+                <h3 class="title">HOVR Phantom 3</h3>
+                <p class="description">Responsive HOVR cushioning reduces impact, returns energy, and helps propel you forward.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$140</span>
+                <button class="btn-product">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=500&q=80" alt="New Balance 574">
+            </div>
+            <div class="card-content">
+                <div class="brand-row">
+                    <span class="category">Heritage Casual</span>
+                    <span class="brand">NEW BALANCE</span>
+                </div>
+                <h3 class="title">574 Core</h3>
+                <p class="description">An all-time classic featuring premium suede overlays and ENCAP midsole cushioning.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$89</span>
+                <button class="btn-product">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=500&q=80" alt="Vans Old Skool">
+            </div>
+            <div class="card-content">
+                <div class="brand-row">
+                    <span class="category">Skateboarding</span>
+                    <span class="brand">VANS</span>
+                </div>
+                <h3 class="title">Old Skool Classic</h3>
+                <p class="description">The iconic low top, lace-up style with sturdy canvas uppers and signature waffle rubber outsoles.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$70</span>
+                <button class="btn-product">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=500&q=80" alt="Air Jordan 1">
+            </div>
+            <div class="card-content">
+                <div class="brand-row">
+                    <span class="category">Retro Basketball</span>
+                    <span class="brand">JORDAN</span>
+                </div>
+                <h3 class="title">Retro 1 High OG</h3>
+                <p class="description">Familiar but always fresh, the iconic Air Jordan 1 is remastered for today's sneakerhead culture.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">$180</span>
+                <button class="btn-product">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
